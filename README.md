@@ -1,7 +1,7 @@
 # Assistant d'analyse de dépense fictif
 
 Cette application est un **assistant d'analyse de dépenses fictif**, permettant à un utilisateur de poser des questions sur des transactions simulées et de recevoir des réponses via un LLM (Mistral). L'application est entièrement containerisée avec Docker et utilise **Streamlit** pour l'interface interactive.
-
+[Cliquer ici pour accéder à l'application](https://accountassistant-johannkouame.streamlit.app/)
 ---
 
 ## Table des matières
