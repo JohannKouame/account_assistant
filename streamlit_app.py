@@ -7,9 +7,9 @@ from src.logger.logger import Logger
 
 def run_streamlit():
     Logger()
-    st.set_page_config(page_title="POC Bankin Simulation", layout="wide")
+    st.set_page_config(page_title="Assistant analyse de dépense", layout="wide")
 
-    st.title("POC Bankin Simulation by Johann KOUAMÉ")
+    st.title("Assistant d'analyse de dépense by Johann KOUAMÉ")
 
     if "started" not in st.session_state:
         st.session_state.started = False
@@ -37,7 +37,7 @@ def run_streamlit():
                     <li>Mes dépenses augmentent-elles ?</li>
                     <li>Comment optimiser mon budget ?</li>
                 </ul>
-                <a href="https://github.com/JohannKouame/bankin_poc">Lien du repo Github</a>
+                
             </div>
             """,
             unsafe_allow_html=True

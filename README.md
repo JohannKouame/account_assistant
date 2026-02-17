@@ -1,7 +1,7 @@
-# POC Bankin Simulation
+# Assistant d'analyse de dépense fictif
 
-Cette application est un **assistant d'analyse de dépenses fictif**, inspiré de Bankin, permettant à un utilisateur de poser des questions sur des transactions simulées et de recevoir des réponses via un LLM (Mistral). L'application est entièrement containerisée avec Docker et utilise **Streamlit** pour l'interface interactive.
-[Cliquer ici pour aller vers le dashboard](https://bankinpoc-johannkouame.streamlit.app/)
+Cette application est un **assistant d'analyse de dépenses fictif**, permettant à un utilisateur de poser des questions sur des transactions simulées et de recevoir des réponses via un LLM (Mistral). L'application est entièrement containerisée avec Docker et utilise **Streamlit** pour l'interface interactive.
+
 ---
 
 ## Table des matières
@@ -17,7 +17,6 @@ Cette application est un **assistant d'analyse de dépenses fictif**, inspiré d
 ---
 
 ## Présentation
-Ce PoC vise à illustrer une nouvelle fonctionnalité possible d'ajouter à l'application [Bankin](https://bankin.com/).
 
 Pour créer ce PoC, j'ai utilisé des données open source de [Kaggle](https://www.kaggle.com/)
     [Voir dataset](https://www.kaggle.com/datasets/ismetsemedov/personal-budget-transactions-dataset?resource=download&select=budjet+%282%29.csv).
@@ -38,7 +37,7 @@ Pour réaliser ce PoC, j'ai fait appel à mes compétences suivantes :
 ### Arborescence
 
 ```bash
-bankin_poc/
+account_simulation/
 │
 ├── data/
 │   ├── processed/              # Données transformées / features
