@@ -39,7 +39,7 @@ def run_streamlit():
                     <li>Mes dépenses augmentent-elles ?</li>
                     <li>Comment optimiser mon budget ?</li>
                 </ul>
-                
+                <a href="https://github.com/JohannKouame/account_assistant">Lien du repo Github</a>
             </div>
             """,
             unsafe_allow_html=True
