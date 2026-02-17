@@ -50,9 +50,11 @@ def run_streamlit():
     logging.info("Chat and dashboard init")
     st.html("""<a href="https://github.com/JohannKouame/account_assistant">Lien du repo Github</a>""")
 
-    st.markdown("""---""")
 
     display_dashboard()
+
+    st.markdown("""---""")
+
     display_chat()
 
     st.markdown("""---""")
