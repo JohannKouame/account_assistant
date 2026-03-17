@@ -1,6 +1,6 @@
 import streamlit as st
 import logging
-from src.client.mistral import MistralClient
+from src.client.mistral import MyMistralClient
 from src.repository.mistral_repository import MistralRepository
 from src.utils.loader import Loader
 from src.logger.logger import Logger
@@ -10,7 +10,7 @@ LOGGING_VARIABLE = "[CHAT]"
 Logger()
 
 # Init model
-mistral = MistralRepository(MistralClient())
+mistral = MistralRepository(MyMistralClient())
 
 def display_chat():
     """

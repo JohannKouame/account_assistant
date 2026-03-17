@@ -1,12 +1,12 @@
 import logging
 import json
 
-from src.client.mistral import MistralClient, LOGGING_VARIABLE
+from src.client.mistral import MyMistralClient, LOGGING_VARIABLE
 from src.utils.loader import Loader
 
 
 class MistralRepository:
-    def __init__(self, client: MistralClient) -> None:
+    def __init__(self, client: MyMistralClient) -> None:
         self.client = client
         self.budget_categories = Loader.json_loader("categories_mapping.json")
         self.prompt_categories = Loader.json_loader("prompt_categories.json")
