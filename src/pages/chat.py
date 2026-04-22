@@ -1,5 +1,7 @@
 import streamlit as st
 import logging
+
+from src.analytics.ga4 import track_event
 from src.client.mistral import MyMistralClient
 from src.repository.mistral_repository import MistralRepository
 from src.utils.loader import Loader
@@ -31,6 +33,10 @@ def display_chat():
         with st.chat_message("user"):
             st.markdown(prompt)
         logging.debug(f"{LOGGING_VARIABLE} Utilisateur a envoyé : {prompt}")
+        track_event("send_chat_message", {
+            "message_length": len(prompt),
+            "feature": "chat"
+        })
 
         # Model response
         with st.chat_message("assistant"):

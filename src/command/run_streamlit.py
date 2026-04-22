@@ -2,6 +2,7 @@ import streamlit as st
 import logging
 import click
 
+from src.analytics.ga4 import inject_ga, track_event
 from src.pages.dashboard import display_dashboard
 from src.pages.chat import display_chat
 from src.logger.logger import Logger
@@ -10,6 +11,9 @@ from src.logger.logger import Logger
 def run_streamlit():
     Logger()
     st.set_page_config(page_title="Assistant analyse de dépense", layout="wide")
+
+    inject_ga()
+    track_event("app_loaded")
 
     st.title("Assistant d'analyse de dépense by Johann KOUAMÉ")
 
@@ -45,6 +49,7 @@ def run_streamlit():
             unsafe_allow_html=True
         )
         if st.button("Commencer"):
+            track_event("click_start", {"screen": "landing"})
             st.session_state.started = True
             st.rerun()
 
