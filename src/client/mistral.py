@@ -1,7 +1,7 @@
 # ./src/client/mistral_client.py
 
 import os
-from mistralai.client import MistralClient
+from mistralai.client import Mistral
 from typing import Generator
 
 LOGGING_VARIABLE = "[MISTRAL]"
@@ -20,7 +20,7 @@ class MyMistralClient:
         :return:
             model response
         """
-        with MistralClient(api_key=self.token) as mistral:
+        with Mistral(api_key=self.token) as mistral:
             res = mistral.chat.complete(
                 model=self.default_model,
                 messages=[{"role": "user", "content": prompt}],
